@@ -12,7 +12,7 @@ window.onload = function(){
         resetHash()
     }
     if (hash == "LLO") {
-        loadPage('LLOPEMMap.svg')
+        loadPage('LLOPEMMap_edit.svg')
         resetHash()
     }
 }
