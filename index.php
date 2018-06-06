@@ -1,5 +1,5 @@
 <?php
-include ('../../pem_config.php');
+include ('pem_config.php');
 ?>
 <!DOCTYPE html>
 <html style = "height:100%">
