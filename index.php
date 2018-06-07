@@ -162,7 +162,9 @@ window.onload = function(){
 									$row = mysqli_fetch_array($result); ?>
 									<?php $current_channel = $row[id]; ?>
 									<h2>
-									<?php echo $row[id] ?>
+										<a href="https://cis.ligo.org/channel/?qq=<?php echo urlencode($row[id]) ?>">
+											<?php echo $row[id] ?>
+										</a>
 									</h2>
                                     <p><b>Current Status: </b>
                                        <?php //if(is_null($row[status])) {
