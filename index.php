@@ -31,7 +31,7 @@ window.onload = function(){
 				<div id="content" style = "border:2.25px solid black; height:93%;">
 					<div id="header">
 						<h1>
-							&nbsp;PEM Channel Info
+							&nbsp;ISC Photodiode Channel Info
 						</h1>
 					</div>
 					<div id="navigation">
