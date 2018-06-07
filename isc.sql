@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 07, 2018 at 05:21 PM
+-- Generation Time: Jun 07, 2018 at 05:32 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -26,6 +26,7 @@ CREATE TABLE `channels` (
   `qpd` tinyint(1) DEFAULT NULL COMMENT 'Whether this is a QPD (Quad Photodiode).',
   `pd_type` varchar(255) DEFAULT NULL COMMENT 'The chemical composition of this photodiode, e.g. Si, InGAs...',
   `efficiency` decimal(2,0) UNSIGNED DEFAULT NULL COMMENT 'The rough efficiency of the photodiode.',
+  `rf` tinyint(1) DEFAULT NULL COMMENT 'Whether this is a photodiode with RF (radio frequency) output.',
   `subsys_0` varchar(63) DEFAULT NULL COMMENT 'Short name of the subsystem, e.g. ASC',
   `subsys_0_name` varchar(255) DEFAULT NULL COMMENT 'Full name of the subsystem, e.g. Alignment Sensing and Control',
   `subsys_0_desc` text COMMENT 'A description of this subsystem',
@@ -51,4 +52,3 @@ CREATE TABLE `channels` (
 ALTER TABLE `channels`
   ADD PRIMARY KEY (`id`),
   ADD KEY `PHOTODIODE_TYPE` (`pd_type`);
-
