@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jun 07, 2018 at 05:34 PM
+-- Generation Time: Jun 07, 2018 at 05:47 PM
 -- Server version: 5.6.38
 -- PHP Version: 7.2.1
 
@@ -11,7 +11,7 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 --
--- Database: `bar`
+-- Database: `quux`
 --
 
 -- --------------------------------------------------------
@@ -42,6 +42,13 @@ CREATE TABLE `channels` (
   `subsys_3_name` varchar(255) DEFAULT NULL COMMENT 'Full name of the sub-sub-sub-subsystem, e.g. Photodiode A.',
   `subsys_4` varchar(63) DEFAULT NULL COMMENT 'Short name of the sub-sub-sub-sub-subsystem, e.g. A'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `channels`
+--
+
+INSERT INTO `channels` (`id`, `description`, `qpd`, `pd_type`, `efficiency`, `rf`, `wfs`, `subsys_0`, `subsys_0_name`, `subsys_0_desc`, `subsys_0_href`, `subsys_1`, `subsys_1_name`, `subsys_1_desc`, `subsys_1_href`, `subsys_2`, `subsys_2_name`, `subsys_3`, `subsys_3_name`, `subsys_4`) VALUES
+('L1:LSC-POPAIR_B', '18I, 90I MHz (2f) BBPD, everything is in I, not Q', 0, 'Si (BBPD)', '20', 1, 0, 'LSC', 'Length Sensing and Control', NULL, NULL, 'POPAIR', 'Pick-off port in-air photodiode', '', '', 'B', 'Photodiode B', NULL, NULL, NULL);
 
 --
 -- Indexes for dumped tables
