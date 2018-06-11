@@ -1,5 +1,7 @@
 # ISC Summary Pages
 
+_Copyright Rainer Corley and Stefan Countryman 2018_
+
 ## Infrastructure
 
 We're using a [LAMP](https://en.wikipedia.org/wiki/LAMP_(software_bundle)) (or,
