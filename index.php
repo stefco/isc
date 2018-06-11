@@ -31,7 +31,7 @@ window.onload = function(){
 				<div id="content" style = "border:2.25px solid black; height:93%;">
 					<div id="header">
 						<h1>
-							&nbsp;PEM Channel Info
+							&nbsp;ISC Photodiode Channel Info
 						</h1>
 					</div>
 					<div id="navigation">
@@ -162,7 +162,9 @@ window.onload = function(){
 									$row = mysqli_fetch_array($result); ?>
 									<?php $current_channel = $row[id]; ?>
 									<h2>
-									<?php echo $row[id] ?>
+										<a href="https://cis.ligo.org/channel/?qq=<?php echo urlencode($row[id]) ?>">
+											<?php echo $row[id] ?>
+										</a>
 									</h2>
                                     <p><b>Current Status: </b>
                                        <?php //if(is_null($row[status])) {
