@@ -166,7 +166,46 @@ window.onload = function(){
 											<?php echo $row[id] ?>
 										</a>
 									</h2>
-                                    <p><b>Current Status: </b>
+										
+									<p><b>Photodiode type: </b>
+										Si <a href="https://dcc.ligo.org/cgi-bin/private/DocDB/ShowDocument?docid=T1100467&version=">
+											(BBPD)
+										</a>	
+									<p><b>Efficiency: </b> ~<?php 
+										echo $row[efficiency]?>%
+									<p><b> Quad PD? </b> <?php
+										if ($row[qpd] == 1) {
+											echo "Yes";
+										} else {
+											echo "No";
+											}?>
+									<p><b> RFPD? </b> <?php
+										if ($row[rf] == 1) {
+											echo "Yes";
+										} else {
+											echo "No";
+											}?>
+									<p><b> WFS? </b> <?php
+										if ($row[wfs] == 1) {
+											echo "Yes";
+										} else {
+											echo "No";
+											}?>
+									<p><b>Subsystems: </b>
+										<br><i><?php echo $row[subsys_0] ?>: </i><?php echo $row[subsys_0_name] ?>
+										<br><i><?php echo $row[subsys_0_desc] ?>
+										
+										<br><i><?php echo $row[subsys_1] ?>: </i><?php echo $row[subsys_1_name] ?>
+										<br><i><?php echo $row[subsys_1_desc] ?>
+
+										<br><i><?php echo $row[subsys_2] ?>: </i><?php echo $row[subsys_2_name] ?>
+										<br><i><?php echo $row[subsys_2_desc] ?>
+
+										<br><i><?php echo $row[subsys_3] ?>: </i><?php echo $row[subsys_3_name] ?>
+										<br><i><?php echo $row[subsys_3_desc] ?>
+									<p><b>Notes: </b>
+										<br><i><?php echo $row[description] ?>
+                                    <!--<p><b>Current Status: </b>
                                        <?php //if(is_null($row[status])) {
                                            // echo "Unknown";
                                          $chan_st = str_replace(":", "_", $current_channel);
@@ -224,7 +263,7 @@ window.onload = function(){
 										}
 										else {
 											echo "(" . $row[grid_location_x] . ", " . $row[grid_location_y] . ", " . $row[grid_location_z] . ")";
-										} ?>
+										} ?>--!>
                                     <!-- <p><b>AA Chassis Channel: </b>
                                         <?php if(is_null($row[aa_channel])) {
                                             echo "Coming soon.";
@@ -246,7 +285,7 @@ window.onload = function(){
                                         else {
                                             echo $row[calibration_date];
                                         } ?> --!>
-									<p><b>Sample spectrum:</b> <br>
+									<!--<p><b>Sample spectrum:</b> <br>
 									<?php if (file_exists("pictures/" . str_replace(":", "-", $row[id]) . "-spec.jpg")) { ?>
 									<?php echo "<img src=\"pictures/" . str_replace(":", "-", $row[id]) . "-spec.jpg\" width=\"100%\" />"; ?>
 									<?php } else {echo " Not currently available.";} ?>
@@ -259,6 +298,7 @@ window.onload = function(){
 									<?php if (file_exists("pictures/" . str_replace(":", "-", $row[id]) . ".jpg")) { ?>
 									<?php echo "<img src=\"pictures/" . str_replace(":", "-", $row[id]) . ".jpg\" width=\"99.5%\" border=\"1.75\" />"; ?>
 									<?php } else {echo "Not currently available.";} ?>
+									--!>
 								<?php }
 								mysqli_close($link); ?></p>
 							</div>
@@ -269,7 +309,7 @@ window.onload = function(){
 				</div>
 			</div>
 			<div id="footer" style="background-color:gainsboro; float:bottom;">
-			<table width="100%" height="5%"><tr><td align="left">Created by Maggie Tse, Vincent Roma, Terra Hardwick</td><td align="center">Last Updated: Apr 23, 2013</td><td align="right"><a href="documentation/index.html">Instructions for editing website</a></td></tr></table>
+			<table width="100%" height="5%"><tr><td align="left">Created by Rainer Corley and Stefan Countryman</td><td align="center">Last Updated: June 8, 2018</td><td align="right"><a href="documentation/index.html">Instructions for editing website</a></td></tr></table>
 			</div>
 		</div>
 	</body>
