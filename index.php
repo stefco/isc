@@ -192,17 +192,40 @@ window.onload = function(){
 											echo "No";
 											}?>
 									<p><b>Subsystems: </b>
-										<br><i><?php echo $row[subsys_0] ?>: </i><?php echo $row[subsys_0_name] ?>
-										<br><i><?php echo $row[subsys_0_desc] ?>
-										
-										<br><i><?php echo $row[subsys_1] ?>: </i><?php echo $row[subsys_1_name] ?>
-										<br><i><?php echo $row[subsys_1_desc] ?>
-
-										<br><i><?php echo $row[subsys_2] ?>: </i><?php echo $row[subsys_2_name] ?>
-										<br><i><?php echo $row[subsys_2_desc] ?>
-
-										<br><i><?php echo $row[subsys_3] ?>: </i><?php echo $row[subsys_3_name] ?>
-										<br><i><?php echo $row[subsys_3_desc] ?>
+										<?php
+											$subsystem_info_written = False;
+											if (array_key_exists('subsys_0', $row) and array_key_exists('subsys_0_name', $row)) {
+												$subsystem_info_written = True;
+												echo "<br><i>" . $row[subsys_0] . ": </i>" . $row[subsys_0_name];
+												if (array_key_exists('subsys_0_desc') {
+													echo "<br><i>" . $row[subsys_0_desc] . "</i>";
+												}
+											}
+											if (array_key_exists('subsys_1', $row) and array_key_exists('subsys_1_name', $row)) {
+												$subsystem_info_written = True;
+												echo "<br><i>" . $row[subsys_1] . ": </i>" . $row[subsys_1_name];
+												if (array_key_exists('subsys_1_desc') {
+													echo "<br><i>" . $row[subsys_1_desc] . "</i>";
+												}
+											}
+											if (array_key_exists('subsys_2', $row) and array_key_exists('subsys_2_name', $row)) {
+												$subsystem_info_written = True;
+												echo "<br><i>" . $row[subsys_2] . ": </i>" . $row[subsys_2_name];
+												if (array_key_exists('subsys_2_desc') {
+													echo "<br><i>" . $row[subsys_2_desc] . "</i>";
+												}
+											}
+											if (array_key_exists('subsys_3', $row) and array_key_exists('subsys_3_name', $row)) {
+												$subsystem_info_written = True;
+												echo "<br><i>" . $row[subsys_3] . ": </i>" . $row[subsys_3_name];
+												if (array_key_exists('subsys_3_desc') {
+													echo "<br><i>" . $row[subsys_3_desc] . "</i>";
+												}
+											}
+											if (! $subsystem_info_written) {
+												echo "<br><i>No subsystem information available.</i>";
+											}
+										?>
 									<p><b>Notes: </b>
 										<br><i><?php echo $row[description] ?>
                                     <!--<p><b>Current Status: </b>
